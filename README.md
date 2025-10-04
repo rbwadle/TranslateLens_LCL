@@ -17,3 +17,18 @@ The basic steps that will be required to make an alternate language add-on mod l
 3. Open and edit the `data\translations.csv` file
 4. Open the `data\DT_Translations_LCL` datatable asset in the ZoneKit and reimport the modified `translations.csv`
 5. Package and test mod.
+
+## Modifying `translations.csv`
+Within the `data\` folder you will find a CSV dump of the `DT_translations` DataTable asset.  A sample of which is shown below:
+
+|Row Name|AssetType|Orig|EN|LCL|FontSize|
+|--------|---------|----|--|---|--------|
+|`MI_dec_grouping_01_bandits_01`|Decal|шо,<br>не фартанулр?|What,<br>No Luck?||70|
+|`MI_dec_grouping_01_bandits_02`|Decal|твій хабар - мій хабар|Your loot - My Loot|Your loot is mine now|0|
+|`MI_dec_grouping_01_bandits_03`|Decal|шо ти,<br>дядя?|What are you up to,<br>Uncle?|What up,<br>Cos?|70|
+
+### Columns Guide
+|Column|Description|Example|Notes|
+|-|-|-|-|
+|Row Name|Reflects the name of the target asset as it is referred to in game|`MI_dec_grouping_01_bandits_01`| Should not be modified or changed |
+|AssetType|Type of asset which will be targeted|Decal|currently only decal assets are in-scope for the early version of TranslateLens, however the ability to show translations for StaticMeshes (Signs,Posters) and other assets is planned|
